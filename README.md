@@ -69,8 +69,8 @@ pkg install python -y
 pkg install binutils -y  # required for some dependencies
 
 # 2. Clone the repository
-git clone https://github.com/yourusername/telegram-cli.git
-cd telegram-cli
+git clone https://github.com/rakhiarrus1988-source/telegram-cli.git
+cd TELEGRAM-CLI
 
 # 3. Create a virtual environment (optional but recommended)
 python -m venv venv
@@ -254,9 +254,9 @@ You can use this tool as a data recovery plugin in other projects.
 Simply import the core modules:
 
 ```python
-from telegram_cli.core.downloader import Downloader
-from telegram_cli.core.uploader import Uploader
-from telegram_cli.database.db_manager import DatabaseManager
+from Telegram_CLI.core.downloader import Downloader
+from Telegram_CLI.core.uploader import Uploader
+from Telegram_CLI.database.db_manager import DatabaseManager
 
 # Use functions directly in your own code
 db = DatabaseManager()
@@ -286,7 +286,7 @@ pip install black flake8
 black telegram_cli/
 
 # Check linting
-flake8 telegram_cli/
+flake8 Telegram_CLI/
 ```
 
 ---
