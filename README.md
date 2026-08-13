@@ -1,12 +1,8 @@
 # Telegram-CLI
 
-बिल्कुल भाई! ये रहा README.md का पूरा कोड – जो प्रोजेक्ट का मुख पृष्ठ (Front Page) है।
-
-इसमें प्रोजेक्ट का पूरा विवरण, सारी फीचर्स (तुम्हारे 16 पॉइंट + Extra), Termux (32-bit) इंस्टॉलेशन गाइड, कमांड्स के उदाहरण और कॉन्फिग की जानकारी है।
 
 ---
 
-```markdown
 # 📁 Telegram CLI – Advanced Multi‑Account File Manager
 
 > **The Ultimate Telegram File Tool** – Parallel Upload/Download, AES‑256 Encryption, Multi‑Account Rotation, SQLite Tracking, and much more, right from your terminal!
@@ -104,7 +100,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 pip install -e .
 tg --help
-```
 
 ---
 
@@ -124,7 +119,7 @@ Add your API_ID and API_HASH.
 3. Add your first Telegram account
 
 ```bash
-tg accounts add --api-id YOUR_API_ID --api-hash YOUR_API_HASH --phone +91XXXXXXXXXX
+tg accounts add --api-id YOUR_API_ID --api-hash YOUR_API_HASH --phone +(your country code)XXXXXXXXXX
 ```
 
 You will be prompted to enter the OTP sent to your Telegram.
