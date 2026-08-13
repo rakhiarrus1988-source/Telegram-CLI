@@ -335,7 +335,7 @@ Q: How do I recover data if I lose the master password?
 
 📝 License
 
-This project is licensed under the MIT License – feel free to use, modify, and distribute.
+This project is licensed under the Apache 2.0 License – feel free to use, modify, and distribute.
 
 ---
 
