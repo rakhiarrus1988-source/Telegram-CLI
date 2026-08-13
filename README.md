@@ -93,8 +93,8 @@ For Linux / macOS / Windows (WSL)
 # Install Python 3.8+ if not already installed
 sudo apt install python3 python3-pip git  # Debian/Ubuntu
 
-git clone https://github.com/yourusername/telegram-cli.git
-cd telegram-cli
+git clone https://github.com/rakhiarrus1988-sourve/Telegram-CLI.git
+cd Telegram-CLI
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
