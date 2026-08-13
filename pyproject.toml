@@ -1,0 +1,101 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telegram-cli"
+version = "0.1.0"
+description = "Advanced Telegram File Manager with Multi-Account, Parallel Upload/Download, Encryption, and SQLite Tracking"
+readme = "README.md"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" },
+]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Communications :: File Sharing",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "telethon>=1.34.0,<2.0.0",
+    "click>=8.1.0,<9.0.0",
+    "cryptography>=41.0.0,<42.0.0",
+    "pyyaml>=6.0,<7.0",
+    "aiofiles>=23.0.0,<24.0.0",
+    "tqdm>=4.65.0,<5.0.0",
+    "sqlalchemy>=2.0.0,<3.0.0",
+    "humanize>=4.8.0,<5.0.0",
+    "croniter>=2.0.0,<3.0.0",
+    "python-dotenv>=1.0.0,<2.0.0",
+    "phonenumbers>=8.13.0,<9.0.0",
+    "colorama>=0.4.6,<0.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0,<8.0.0",
+    "pytest-asyncio>=0.21.0,<1.0.0",
+    "pytest-cov>=4.1.0,<5.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/telegram-cli"
+"Bug Tracker" = "https://github.com/yourusername/telegram-cli/issues"
+"Source Code" = "https://github.com/yourusername/telegram-cli"
+
+[project.scripts]
+tg = "telegram_cli.cli:main"
+
+[tool.setuptools]
+packages = { find = { include = ["telegram_cli*"] } }
+
+[tool.setuptools.package-data]
+telegram_cli = ["py.typed"]
+
+# ==============================
+# Development tools configuration (optional)
+# ==============================
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
