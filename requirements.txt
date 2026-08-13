@@ -1,0 +1,59 @@
+# Core Telegram Library (MTProto)
+# Telethon is pure Python and works on 32-bit ARM
+telethon>=1.34.0,<2.0.0
+
+# CLI Interface
+click>=8.1.0,<9.0.0
+
+# Encryption (AES-256-GCM, ChaCha20, etc.)
+# cryptography has pre-built wheels for many architectures; on Termux it compiles fine with binutils
+cryptography>=41.0.0,<42.0.0
+
+# YAML config file support
+pyyaml>=6.0,<7.0
+
+# Asynchronous file I/O (for reading/writing chunks)
+aiofiles>=23.0.0,<24.0.0
+
+# Progress bars with tqdm
+tqdm>=4.65.0,<5.0.0
+
+# SQLite ORM (lightweight, pure Python)
+sqlalchemy>=2.0.0,<3.0.0
+
+# Human-readable size and time formatting
+humanize>=4.8.0,<5.0.0
+
+# For advanced scheduling (cron-like) – optional but we add it
+croniter>=2.0.0,<3.0.0
+
+# For exporting/importing config as tar.gz (built-in library not needed)
+# but we might want to use python-dotenv for .env support
+python-dotenv>=1.0.0,<2.0.0
+
+# For additional validation (e.g., phone numbers)
+phonenumbers>=8.13.0,<9.0.0
+
+# For batch processing and queue – we can use simple asyncio.Queue, but rq might be heavy
+# Instead, we use nothing extra; but if we want persistent queue, we could add:
+# rq>=1.15.0,<2.0.0  # Optional – but we are not adding to keep it light.
+# We'll implement our own queue.
+
+# For file integrity checks (hashlib is built-in, no extra lib needed)
+
+# For scheduling (APScheduler is heavy; we'll use our own crontab parser with croniter)
+# We already have croniter above.
+
+# For progress bars in async, tqdm supports asyncio.
+
+# Testing dependencies (if you want to run tests)
+# Not required for runtime, but we list them:
+pytest>=7.4.0,<8.0.0
+pytest-asyncio>=0.21.0,<1.0.0
+pytest-cov>=4.1.0,<5.0.0
+
+# Optional: for better console output (colorama is often already included by click)
+# click has its own styling, but colorama helps on Windows
+colorama>=0.4.6,<0.5.0
+
+# For progress bar in terminal – tqdm is enough.
