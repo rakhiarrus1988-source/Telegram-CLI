@@ -50,7 +50,7 @@ Whether you want to:
 | 15 | 😴 **Random Breaks/Sleeps** – Human‑like delays to stay undetected | ✅ |
 | 16 | 🔌 **Plugin Architecture** – Add to other projects for data recovery | ✅ |
 
-### 🌟 Extra Goodies (Added as per your request)
+### 🌟 Extra Goodies
 - 📦 **Batch Processing with Queue** – Upload/download multiple files in a queue  
 - ✅ **File Integrity Check** – MD5/SHA256 checksum verification  
 - ⏰ **Scheduled Jobs** – Cron‑like automation (upload every night)  
